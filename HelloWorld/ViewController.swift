@@ -19,7 +19,31 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // Adds show message function to the ViewController class
+    @IBAction func showRobot() {
+        let alertController = UIAlertController(title: "Hello", message: "I am robot!", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
 
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func showScream() {
+        let alertController = UIAlertController(title: "Hello", message: "I am scream!", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        present(alertController, animated: true, completion: nil)
+    }
+
+    @IBAction func showBeer() {
+        let alertController = UIAlertController(title: "Hello", message: "I am beer!", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        present(alertController, animated: true, completion: nil)
+    }
 
 }
 
