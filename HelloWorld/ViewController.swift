@@ -35,44 +35,25 @@ class ViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 
-    // Adds showRobot function to the ViewController class
-    @IBAction func showRobot() {
-        let arrayOfPhrases = [ "I am robot!", "001010111110101011", "Beep boop"]
-
-        setupController(phrase: selectPhrase(phrases: arrayOfPhrases))
-    }
-
-    // Adds showScream function to the ViewController class
-    @IBAction func showScream() {
-        let arrayOfPhrases = [ "I am scream!", "AHHHHHHHHHHHHHH", "Boo"]
-
-        setupController(phrase: selectPhrase(phrases: arrayOfPhrases))
-    }
-
-    // Adds showBeer function to the ViewController class
-    @IBAction func showBeer() {
-        let arrayOfPhrases = [ "I am beer!", "mmmmmmbeeer", "Fizzle Pop Hop"]
-
-        setupController(phrase: selectPhrase(phrases: arrayOfPhrases))
-    }
-
-    // Adds showDog function to the ViewController class
-    @IBAction func showDog() {
-        let arrayOfPhrases = [ "I am dog!", "Woof Woof", "Doggo luv you"]
-
-        setupController(phrase: selectPhrase(phrases: arrayOfPhrases))
-    }
-
-    // Adds showEggplant function to the ViewController class
-    @IBAction func showEggplant() {
-        let arrayOfPhrases = [ "I am eggplant!", "Eggplant is puprple", "Eggplant is a vegatable"]
-
-        setupController(phrase: selectPhrase(phrases: arrayOfPhrases))
-    }
-
-    // Adds showPoop function to the ViewController class
-    @IBAction func showPoop() {
-        let arrayOfPhrases = [ "I am poop!", "Some call me Mr. Hankey", "pppptttt"]
+    @IBAction func showMessage(sender: AnyObject) {
+        var arrayOfPhrases : Array<String> {
+            switch sender.tag {
+            case 0:
+                return ["I am robot!", "001010111110101011", "Beep boop"]
+            case 1:
+                return ["I am scream!", "AHHHHHHHHHHHHHH", "Boo"]
+            case 2:
+                return ["I am beer!", "mmmmmmbeeer", "Fizzle Pop Hop"]
+            case 3:
+                return ["I am dog!", "Woof Woof", "Doggo luv you"]
+            case 4:
+                return ["I am eggplant!", "Eggplant is puprple", "Eggplant is a vegatable"]
+            case 5:
+                return ["I am poop!", "Some call me Mr. Hankey", "pppptttt"]
+            default:
+                return ["I am undefined!"]
+             }
+        }
 
         setupController(phrase: selectPhrase(phrases: arrayOfPhrases))
     }
